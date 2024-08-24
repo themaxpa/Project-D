@@ -122,7 +122,7 @@ margin-top: 55px;
                 <li><a class="dropdown-item" href="../Logout.php">Log Out</a></li>
               </ul>
             </div>
-          <a href="index.php" class="logo me-auto me-lg-0"><img src="../assets/img/D LOGO.png" alt="" class="img-fluid"></a>
+          <a href="./VendorHomePage.php" class="logo me-auto me-lg-0"><img src="../assets/img/D LOGO.png" alt="" class="img-fluid"></a>
 
           <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
@@ -160,20 +160,25 @@ margin-top: 55px;
       </div>
     </div>
   </header><!-- End Header -->
-
-
-
+  <section id="hero" class="d-flex flex-column justify-content-center" style="background-image: url('../assets/img/workspace.jpg'); background-size: cover;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title">
+                    <h1 class="title-h1" style="margin: 60px 0 10px 0; font-size: 90px; font-weight: 700;line-height: 86px; color:gray;">
+                    Organizer workspace
+                    </h1>
+                </div>
+                <h2 style=" font-family:myFont; color:gray">The only way to do great work is to love what you do</h2>
+            </div>
+            <div class="container">
+        </div>
+    </section><!-- End Hero -->
   <!-- === filler ===-->
   <section>
     <div class="filler" style="height:50dvh;">
       <div class="index-sec-title">
         <h1 class="f-title">We aim to create new standards in the track day market</h1>
         <h4 class="f-sub-title">And keep them evolving</h4>
-
-
-
-
-
 
       </div>
   </section><!-- End filler -->

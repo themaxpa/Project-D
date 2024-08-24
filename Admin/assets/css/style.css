@@ -84,7 +84,7 @@
   .header-filler{
     width:100%;
     height:10dvh;
-    background-color: #202232;
+    background-color:#babcc5;
   }
   
   h1,
@@ -107,7 +107,7 @@
     bottom: 0;
     z-index: 9999;
     overflow: hidden;
-    background: #ee244e;
+    background: #babcc5;
   }
   
   #preloader:before {
@@ -685,7 +685,7 @@
     padding-left: 15px;
     width: 370px;
     height: 349px;
-    color: #fff;
+    color:#babcc5;
   
   }
   

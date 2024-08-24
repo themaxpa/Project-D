@@ -2,7 +2,7 @@
 include '../connection/dbconnection.php';
 include './AdminHeader.php';
 ?>
-<div class="header-filler" style="background-color: #20232b;"></div>
+<div class="header-filler" style="background-color:#babcc5;"></div>
 <section style="background-color: #20232b;">
   <div class="container py-5">
     <div class="row">
