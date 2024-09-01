@@ -18,6 +18,16 @@ height: 150vh;
 
 </style>
 
+<?php 
+
+$dqry= "SELECT * FROM `user_login` JOIN `vendor_registration` ON `user_login`.`vendor_id`= `vendor_registration`.`vendor_id` WHERE `login_id` = '$uid'  "; 
+          $data = mysqli_query($con, $dqry);
+
+          if ($data->num_rows > 0) {
+            while ($row = $data->fetch_assoc()) {
+?>
+    
+
 
     <section class="SectionProfile">
       
@@ -27,7 +37,7 @@ height: 150vh;
             <div class="align-items-center card-body d-flex profile-card pt-4">
 
               <img class="profileImg" src="./assets/img/Cardbox-3.jpg" alt="Profile" class="rounded-circle">
-              <h2 style="margin-left: 10px;">Kevin Anderson</h2>
+              <h2 style="margin-left: 10px;"><?php echo  $row["name"];?></h2>
          
               <div class="social-links mt-2">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -74,17 +84,17 @@ height: 150vh;
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                    <div class="col-lg-9 col-md-8"><?php echo  $row["name"];?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Company</div>
-                    <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
+                    <div class="col-lg-9 col-md-8"><?php echo  $row["company_name"];?></div>
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Job</div>
-                    <div class="col-lg-9 col-md-8">Web Designer</div>
+                    <!-- <div class="col-lg-3 col-md-4 label">Job</div>
+                    <div class="col-lg-9 col-md-8"></div> -->
                   </div>
 
                   <div class="row">
@@ -94,21 +104,23 @@ height: 150vh;
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                    <div class="col-lg-9 col-md-8"><?php echo  $row["address"];?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Phone</div>
-                    <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                    <div class="col-lg-9 col-md-8"><?php echo  $row["phone"];?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                    <div class="col-lg-9 col-md-8"><?php echo  $row["email"];?></div>
                   </div>
 
                 </div>
-
+<?php
+            }}
+?>
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->

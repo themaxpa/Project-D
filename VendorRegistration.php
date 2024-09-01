@@ -69,8 +69,16 @@ include './header.php';
                         <input type="text" name="address" class="form-control" required>
                     </div>
                     <div class="reg-input">
+                        <label class="reg">Country</label>
+                        <input type="text" name="country" class="form-control" required>
+                    </div>
+                    <div class="reg-input">
                         <label class="reg">Company Name</label>
                         <input type="text" name="company_name" class="form-control" required>
+                    </div>
+                    <div class="reg-input">
+                        <label class="reg">About</label>
+                        <input type="text" name="about" class="form-control" required>
                     </div>
                     <div class="reg-input">
                         <label class="reg">Category</label>
@@ -122,7 +130,7 @@ if (isset($_REQUEST['submit'])) {
         mysqli_query($con, $lqry);
         echo $lqry;
 
-        echo "<script>window.location='./Vendor/VendorHomePage.php'</script>";
+        echo "<script>window.location='./account.php'</script>";
     }
 }
 ?>

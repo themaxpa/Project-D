@@ -187,21 +187,29 @@ height: 5vh;
                 </ul>
               </li>
               <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              <?php
+
+$dqry = "SELECT * FROM `user_login` JOIN `vendor_registration` ON `user_login`.`vendor_id`= `vendor_registration`.`vendor_id` where login_id='$uid'";
+// echo $dqry;
+$result = mysqli_query($con, $dqry);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $rid = $row['vendor_id'];
+?>
 
                 <li class="nav-item dropdown pe-3">
                   <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                     <img src="./assets/img/Cardbox-3.jpg" alt="Profile" class="rounded-circle" style="width: 40px; height:40px">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">8989989</span>
+                    <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo  $row["name"]; ?></span></span>
                   </a><!-- End Profile Iamge Icon -->
-             
+
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                      <h6>bgg</h6>
-                      <span>Web Designer</span>
+                      <h6><?php echo  $row["name"]; ?></h6>
+                      <!-- <span>Web Designer</span> -->
                     </li>
                     <li>
                       <hr class="dropdown-divider">
-                    </li>
 
                     <li>
                       <a class="dropdown-item d-flex align-items-center"  href="./VendorProfile.php">
@@ -243,6 +251,9 @@ height: 5vh;
 <!-- End Profile Dropdown Items -->
                  </li><!-- End Profile Nav -->
               </ul>
+ <?php
+    }}
+  ?>
           </nav><!-- .navbar -->
         </div>
       </div>
