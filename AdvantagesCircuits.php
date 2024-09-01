@@ -2,6 +2,24 @@
 include './connection/dbconnection.php';
 include './header.php';
 ?>
+<style>
+    .carousel-bx3 {
+    transform: skew(-20deg);
+    background-color: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 900;
+    height: 45px;
+    width: 185px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    border-radius: 10;
+    margin-left: 26px;
+}
+</style>
 
 <section id="hero" class="d-flex flex-column justify-content-center" style="background-image: url('./assets/img/track5.jpg'); height:90dvh;">
     <div class="header-app">

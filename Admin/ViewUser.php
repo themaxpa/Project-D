@@ -19,8 +19,8 @@ include './AdminHeader.php';
                     <th>UserName</th>
                     <th>Status</th>
                     <th>Type</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th> Name</th>
+                    <!-- <th>Last Name</th> -->
                     <th>DOB</th>
                     <th>Gender</th>
                     <th>Phone Number</th>
@@ -42,8 +42,8 @@ include './AdminHeader.php';
                         echo "<td>" . $row["username"] . "</td>";
                         echo "<td>" . $row["status"] . "</td>";
                         echo "<td>" . $row["type"] . "</td>";
-                        echo "<td>" . $row["first_name"] . "</td>";
-                        echo "<td>" . $row["last_name"] . "</td>";
+                        echo "<td>" . $row["first_name"] .$row["last_name"] . "</td>";
+                        // echo "<td>" . $row["last_name"] . "</td>";
                         echo "<td>" . $row["dob"] . "</td>";
                         echo "<td>" . $row["gender"] . "</td>";
                         echo "<td>" . $row["ph"] . "</td>";

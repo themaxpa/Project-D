@@ -2,8 +2,11 @@
 session_start();
 include '../connection/dbconnection.php';
 @$uid = $_SESSION['login_id'];
-echo $uid;
+// echo $uid;
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +40,191 @@ echo $uid;
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/login.css4 " rel="stylesheet">
+<style>
+  
+  .header-app {
+      position: relative;
+      margin-top: 70px;
+      background-color: #ee244e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+    }
 
+    .wwa {
+      display: none;
+    }
+
+    .social {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      margin-top: 50px
+    }
+
+    .carousel-control-pre .carousel-control-prev-icon span {
+      background-color: transparent;
+    }
+
+    .items4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 160px;
+      gap: 20px;
+    }
+
+    .search-bar-items {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .carousel-bx3 {
+      border-radius: 10px;
+      height: 55px;
+      width: 235px;
+      padding-left: 20px;
+      padding-top: 15px;
+      font-size: 15px
+    }
+
+    .carousel-bx31 {
+      padding-top: 15px;
+      font-size: 14px
+    }
+
+    .carousel-bx3 {
+      transform: skew(-20deg);
+      background-color: transparent;
+      border: 1px #fff solid;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 900;
+      height: 45px;
+      width: 185px;
+      text-transform: uppercase;
+      padding: 13px 5px;
+      border-radius: 10;
+      margin-left: 26px;
+    }
+
+    .carousel-bx31 {
+      transform: skew(-20deg);
+      background-color: transparent;
+      border: 1px #fff solid;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 900;
+      height: 45px;
+      width: 185px;
+      text-transform: uppercase;
+      padding: 13px 5px;
+      border-radius: 10px;
+      margin-left: 26px;
+    }
+
+    .search-bar {
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      margin: 0 auto;
+      font-size: 14px;
+      max-width: 900px;
+      padding: 16px 32px;
+      position: relative;
+      align-items: center;
+      border-radius: 20px;
+      transform: skew(-20deg);
+      justify-content: center;
+      background-color: #20232b;
+      margin: 0px 150px -200px 150px;
+    }
+
+    .search-bar-search input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      margin-top: -140px;
+
+    }
+
+    .search-bar-search {
+      height: 60px;
+      width: 170px;
+      background-color: transparent;
+      transform: skew(-20);
+      border-radius: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+
+    .search-bar-items sub {
+      margin-left: -50px;
+    }
+
+    .title-h1 {
+      margin: 60px 0 10px 0;
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 86px;
+      color: #fff;
+    }
+
+    .all-tracks-btn {
+      border-radius: 10px;
+      background: transparent;
+      transform: skew(-20deg);
+      color: #fff;
+      border: 1px solid #fff;
+      width: 180px;
+      height: 45px;
+      margin: 20px 0px 0px 240px;
+      padding: 10px 18px;
+      font-size: 17px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .ppp {
+      padding-left: 50px;
+    }
+
+    .stb-or-btn {
+      margin: 20px 0px 0px -70px;
+    }
+
+    .achivement {
+      margin-left: 270px;
+    }
+
+    .social p {
+      color: #fff;
+      opacity: 0.4;
+      margin-right: 250px;
+      font-weight: 400
+    }
+
+    .cta .container {
+      height: 10vh;
+    }
+
+    /* Carousel */
+    .d-block w-100 {
+      height: 600px;
+      opacity: 0.3;
+    }
+
+    .phone-carousel {
+      display: none;
+    }
+</style>
 </head>
 <body>
 
@@ -67,6 +254,7 @@ echo $uid;
               <li><a class="nav-link scrollto" href="../Organizer.php">Organizer</a></li>
               <li><a class="nav-link scrollto" href="../RacingTeam.php">Racing Team</a></li>
               <li><a class="nav-link scrollto " href="../CorporateEvent.php">Corporate Event</a></li>
+              <li><a class="nav-link scrollto " href="./UserProfile.php">Profile </a></li>
               <li class="dropdown"><a href="#"><span>Circuit</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   <li><a href="#">Cars</a></li>
@@ -90,17 +278,25 @@ echo $uid;
                     <i class="bi bi-search"></i>
                   </a>
                 </li><!-- End Search Icon-->
+                <?php
+
+              $dqry = "SELECT * FROM `user_login` JOIN `user_registration` ON `user_login`.`reg_id`= `user_registration`.`reg_id` where login_id='$uid'";
+              // echo $dqry;
+              $result = mysqli_query($con, $dqry);
+              if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+                      $rid = $row['reg_id'];
+?>
 
                 <li class="nav-item dropdown pe-3">
-
                   <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                     <img src="../assets/img/cta5.jpg" alt="Profile" class="rounded-circle" style="width: 40px; height:40px">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                    <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo  $row["first_name"];?></span>
                   </a><!-- End Profile Iamge Icon -->
 
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                      <h6>Kevin Anderson</h6>
+                      <h6><?php echo  $row["first_name"];?></h6>
                       <span>Web Designer</span>
                     </li>
                     <li>
@@ -108,7 +304,7 @@ echo $uid;
                     </li>
 
                     <li>
-                      <a class="dropdown-item d-flex align-items-center" href="./UserProfile.php">
+                      <a class="dropdown-item d-flex align-items-center"  href="./UserProfile.php?rid=<?php echo  $row["reg_id"]; ?>">
                         <i class="bi bi-person"></i>
                         <span>My Profile</span>
                       </a>
@@ -143,8 +339,11 @@ echo $uid;
                         <span>Sign Out</span>
                       </a>
                     </li>
-
-                  </ul><!-- End Profile Dropdown Items -->
+                    </ul>
+<?php
+            }}
+?>
+<!-- End Profile Dropdown Items -->
                  </li><!-- End Profile Nav -->
               </ul>
             </ul>
@@ -160,10 +359,10 @@ echo $uid;
       <div class="row justify-content-center">
         <div class="title">
           <h1 class="title-h1" style="    margin: 60px 0 10px 0; font-size: 70px; font-weight: 700;line-height: 86px; color: #fff;">
-            YOUR TRACKDAY MARKETPLACE.
+            YOUR TRACKDAY MARKETPLACE
           </h1>
         </div>
-        <h2 style=" font-family:myFont;">Search. Book. Drive. Repeat</h2>
+        <h2 style=" font-family:myFont;">Search. Book. Drive. Repeat.</h2>
       </div>
       <div class="search-bar">
         <div class="search"></div>
@@ -185,7 +384,7 @@ echo $uid;
         <div class="track-section" style=" display: flex;">
 
           <?php
-          $qry = "SELECT `vendor_id`,`image`,`track_name`,`event`,`date`,`vehicle_type`,`category`,`organizer`,`noise_level`,`price` FROM `tracks`";
+          $qry = "SELECT `track_id`,`vendor_id`,`image`,`track_name`,`event`,`date`,`vehicle_type`,`category`,`organizer`,`noise_level`,`price` FROM `tracks`";
           // echo $qry;
           $data = mysqli_query($con, $qry);
 
@@ -265,9 +464,9 @@ echo $uid;
                     <div class="row mt-4">
                       <div class="flex__columns">
                         <div class="col-6 flex-column p-0 pr-2" style="margin:0px 0px 0px 65px;">
-
+                        
                           <div class="price">
-                            <a rel="alternate" class="track-price" href="./UserTrackBooking.php"  hreflang="en">
+                            <a rel="alternate" class="track-price" href="./UserTrackBooking.php?id=<?php echo  $row["track_id"]; ?> "  hreflang="en">
                               <button  style="  width: 150px;height: 45px; font-weight: 900;font-size: 22px;     margin: -5px 0px 0px 120px;">
                                 <?php echo  $row["price"];  ?>
                               </button>
@@ -297,7 +496,7 @@ echo $uid;
         <p class="p-txt" style="padding-left: 50px;">We offer a wide range of track day dates for cars and bikes, driving and riding experience as well as test days for racing teams. Easily bookable, independently from the corresponding organizer.</p>
       </div>
       <div class="stb-or-btn">
-        <a href="./demo.php" class="all-tracks-btn">All track days</a>
+        <a href="../demo.php" class="all-tracks-btn">All track days</a>
       </div>
     </div><!--=== End all tracks Section ===== -->
 
@@ -448,7 +647,7 @@ echo $uid;
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src="../assets/img/slide1.jpg" class="d-block w-100" alt="..." style="height: 600px;">
+        <img src="../assets/img/carousel.jpg" class="d-block w-100" alt="..." style="opacity:0.3">
         <div class=" carousel-caption mb-5 d-md-block">
           <h1 style="margin: 0 0 40px 0; font-family:myFont; font-size: 62px; font-weight: 700;  line-height: 86px; color: #fff;"> YOUR BEST TRACK DAY EXPERIENCE START HERE </h1>
           <div class="content">
@@ -465,7 +664,7 @@ echo $uid;
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="../assets/img/Slide2.jpg" class="d-block w-100" alt="..." style="height: 600px;">
+        <img src="../assets/img/carousel-car.jpg" class="d-block w-100" alt="..." style="opacity:0.3">
         <div class=" carousel-caption d-none d-md-block">
           <h1 style="margin: -303px 0 40px 0; font-family:myFont;  font-size: 62px; font-weight: 700; line-height: 86px; color: #fff;">YOUR BEST MOTORSPORT TEST DAYS START HERE</h1>
           <div class="content">
@@ -483,7 +682,7 @@ echo $uid;
       </div>
 
       <div class="carousel-item">
-        <img src="../assets/img/slide3.jpg" class="d-block w-100" alt="..." style="height: 600px;">
+        <img src="../assets/img/carousel-bike.jpg" class="d-block w-100" alt="..." style="opacity:0.3">
         <div class="carousel-caption d-none d-md-block">
           <h1 style="margin: -303px 0 0px 0; font-family:myFont; font-size: 60px; font-weight: 700; line-height: 86px; color: #fff; margin-bottom:11px">YOUR BEST MOTORBIKE TEST DAYS START HERE </h1>
           <div class="content">

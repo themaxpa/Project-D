@@ -6,8 +6,8 @@ include './AdminHeader.php';
  <!-- Reports -->
  <div class="col-12" style="margin-top: 100px;">
                         <div class="card">
-                            <div class="card-body" style="background-color: #ee244b;">
-                                <h4 class="h1-txt">Track Details</h4>
+                            <div class="card-body" style="background-color: #babcc5;">
+                                <h4 class="h1-txt" style="color: #ee244e;">Track Details</h4>
                             </div>
                         </div>
                     </div><!-- End Reports -->

@@ -5,17 +5,30 @@ include '../connection/dbconnection.php';
 include '../Vendor/VendorHeader.php';
 
 ?>
+<style>
+  .SectionProfile{
+background-image: url('./assets/img/wp12661363-bike-racing-4k-wallpapers.jpg');
+height: 150vh;
+  }
+.profileImg{
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+}
+
+</style>
 
 
-    <section class="section profile" style="background-color:#ee244b">
+    <section class="SectionProfile">
+      
       <div class="row" style="display: flex;margin: 0px 0px 0px 900px;flex-wrap: nowrap;flex-direction: column;align-content: flex-end;align-items: baseline;justify-content: flex-start;">
 
-          <div class="card" style="margin-top: 36px; margin-bottom:10px; margin-left: -52px; width: 613px;">
+          <div class="card" style="margin-top: 140px; margin-bottom:10px; margin-left: -52px; width: 613px;">
             <div class="align-items-center card-body d-flex profile-card pt-4">
 
-              <img src="./assetsX/img//profileIMG.jpg" alt="Profile" class="rounded-circle">
-              <h2>Kevin Anderson</h2>
-              <h3>Web Designer</h3>
+              <img class="profileImg" src="./assets/img/Cardbox-3.jpg" alt="Profile" class="rounded-circle">
+              <h2 style="margin-left: 10px;">Kevin Anderson</h2>
+         
               <div class="social-links mt-2">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>

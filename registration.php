@@ -9,6 +9,10 @@ include './header.php';
         * {
             color: #fff;
         }
+        .reg-container{
+            margin-bottom: 30px;
+        }
+
     </style>
 </head>
 
@@ -48,7 +52,7 @@ include './header.php';
         </div>
     </section>
 
-    <section class="add-container" style="height:111dvh">
+    <section class="add-container" style="height:130dvh">
         <div class="reg-container">
             <h3>REGISTRATION</h3>
             <form method='post'>
@@ -141,7 +145,7 @@ VALUES((select max(reg_id) FROM user_registration),'$email', '$password', 'appro
         mysqli_query($con, $lqry);
         echo $lqry;
 
-        echo "<script>window.location='./User/RegistrationCompleted.php'</script>";
+        echo "<script>window.location='./account.php'</script>";
     }
 }
 

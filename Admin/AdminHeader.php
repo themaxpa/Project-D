@@ -50,7 +50,7 @@ include '../connection/dbconnection.php';
     <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="./assets//css/style.css" type="text/css" rel="stylesheet">
+    <link href="./assets/css/style.css" type="text/css" rel="stylesheet">
 
 </head>
 
@@ -63,7 +63,7 @@ include '../connection/dbconnection.php';
                 <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
                     <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown">
-                            <h1 class="h1-txt" style="color:#20232b">Admin</h1>
+                            <h1 class="h1-txt" style="color:gray">Admin</h1>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                             <li class="dropdown-header text-start">
@@ -80,10 +80,10 @@ include '../connection/dbconnection.php';
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
                             <!-- <li><a class="nav-link scrollto active" href="./ViewUser.php">View User</a></li> -->
-                            <li><a class="nav-link scrollto" href="./about.php">About</a></li>
+                            <!-- <li><a class="nav-link scrollto" href="./about.php">About</a></li>
                             <li><a class="nav-link scrollto" href="#services">Services</a></li>
                             <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+                            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
                             <li class="dropdown"><a href="#"><span>View</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
                                     <li><a href="./ViewUser.php">User</a></li>
@@ -101,7 +101,7 @@ include '../connection/dbconnection.php';
                                     <li><a href="#">Drop Down 4</a></li> -->
                                 </ul>
                             </li>
-                            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                            <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
                             <li><i class="bi bi-list mobile-nav-toggle"></i></li>
                         </ul>
 

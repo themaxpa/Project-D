@@ -7,14 +7,36 @@ include './header.php';
     width: 100%;
     height:50vh;
   }
+  .container {
+    max-width: 1170px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.img-underline{
+  height:3vh;
+  width:auto;
+}
+
+
+/* Media query */
+@media (max-width: 480px) {
+  .section-title p {
+    margin-bottom: 0;
+    padding-left: 25px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+}
 </style>
+<div class="header-filler" style="background-color: #20232b;"></div>
+
 <!-- ======= Services Section ======= -->
 <section id="services" class="services">
   <div class="container">
 
     <div class="section-title">
-      <h2>Services</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <h2 class="h1-txt">Services</h2>
+      <p class="p-txt">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
     </div>
 
     <div class="row">
@@ -69,6 +91,14 @@ include './header.php';
     </div>
   </div>
 </section><!-- End Services Section -->
+
+
+<div class="form-control">
+    <input type="value" required="">
+    <label>
+        <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+    </label>
+</div>
 
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact" style="background-color: #ee244b;">
@@ -137,6 +167,9 @@ include './header.php';
 
   </div>
 </section><!-- End Contact Section -->
+<div class="img-underline">
+  <a href="./assets/img/#20232b.jpg"></a>
+</div>
 
 <?php
 

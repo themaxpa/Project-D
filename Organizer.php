@@ -95,6 +95,22 @@ include './header.php';
     align-items: center;
     flex-wrap: wrap;
   }
+  .carousel-bx3 {
+    transform: skew(-20deg);
+    background-color: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 900;
+    height: 45px;
+    width: 185px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    border-radius: 10;
+    margin-left: 26px;
+}
 </style>
 <!-- Carousel Silde -->
 

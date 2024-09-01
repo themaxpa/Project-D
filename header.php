@@ -32,7 +32,6 @@
   <link href="assets/css/popup.css" type="text/css" rel="stylesheet">
   <link href="assets/css/login.css" type="text/css" rel="stylesheet">
   <style>
-
     .price a button {
       margin: 10px 0px 0px 60px;
     }
@@ -42,62 +41,70 @@
       position: relative;
       text-align: center;
     }
- .header-filler{
-  width:100%;
-  height:8dvh;
-  background-color: #202232;
-}
 
-.header-app{
+    .header-filler {
+      width: 100%;
+      height: 8dvh;
+      background-color: #202232;
+    }
+
+    .header-app {
       position: relative;
       margin-top: 70px;
-    background-color: #ee244e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:10vh;
-}
+      background-color: #ee244e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+    }
 
-.items4 {
+    .items4 {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-right: 160px;
       gap: 20px;
     }
+
     .search-bar-items {
       color: #fff;
       font-weight: 500;
     }
-    .carousel-bx3{
-    border-radius:10px;
-    height:55px;
-    width:235px;
-    padding-left:20px;
-    padding-top:15px;
-    font-size:15px
-  }
-.carousel-bx31{
-padding-top:15px;font-size:14px
-}
-.carousel-bx3{
-  transform: skew(-20deg);
-  background-color: transparent;
-  border: 1px #fff solid;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 900;
-  height: 45px;
-  width: 185px;
-  text-transform: uppercase;
-  padding: 13px 5px;
-  border-radius: 10;
-  margin-left: 26px;
-}
-.carousel-bx31{
-  transform: skew(-20deg);
+
+    .carousel-bx3 {
+      border-radius: 10px;
+      height: 55px;
+      width: 235px;
+      padding-left: 20px;
+      padding-top: 15px;
+      font-size: 15px
+    }
+
+    .carousel-bx31 {
+      padding-top: 15px;
+      font-size: 14px
+    }
+
+    .carousel-bx3 {
+      transform: skew(-20deg);
+      background-color: transparent;
+      border: 1px #fff solid;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 900;
+      height: 45px;
+      width: 185px;
+      text-transform: uppercase;
+      padding: 13px 5px;
+      border-radius: 10;
+      margin-left: 26px;
+    }
+
+
+    .carousel-bx31 {
+    transform: skew(-20deg);
     background-color: transparent;
     border: 1px #fff solid;
     color: #fff;
@@ -106,14 +113,77 @@ padding-top:15px;font-size:14px
     font-size: 12px;
     font-weight: 900;
     height: 45px;
-    width: 185px;
+    width: 205px;
     text-transform: uppercase;
     padding: 13px 5px;
     border-radius: 10px;
-    margin-left: 26px;
+    margin-left: 15px;
+}
+    .title-h1 {
+      margin: 60px 0 10px 0;
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 86px;
+      color: #fff;
+    }
+
+    /* Media Query =====================================================================================================================================
+===================================================================================================================================================*/
+
+    @media (max-width: 480px) {
+      .stb-or-btn {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        padding-left: 0px;
+        padding-top: 15px;
+      }
+
+      .account-btn {
+        display: none;
+      }
+
+      .app-title .p-txt {
+        color: #fff;
+        font-weight: 600;
+        font-size: 10px;
+      }
+
+      .carousel-bx3 {
+        display: none;
+      }
+
+      .carousel-bx31 {
+        display: none;
+      }
+    
+    /* footer */
+.bottom-nav-list  li{
+  display: none;
+}
+.news-letter1 {
+    color: #fff;
+    height: 5vh;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #20232b;
+    border: solid 1px #fff;
+}
+.news-letter2 {
+    color: #fff;
+    height: 5vh;
+    width: 70px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #ee244e;
+    border: solid 1px #fff;
+    font-size: 10px;
+    padding: 5px;
+}
+.social p{
+  font-size: 5px;
+  margin-right: 0px;
 }
 
-
+    }
   </style>
 </head>
 
@@ -149,9 +219,9 @@ padding-top:15px;font-size:14px
                   <li><a href="#">Track 5</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
             </ul>
-           
+
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar --
           <a href="./account.php" class="account-btn" style=" font-size:30px">
@@ -162,4 +232,3 @@ padding-top:15px;font-size:14px
       </div>
     </div>
   </header><!-- End Header col-xl-8 -->
-  

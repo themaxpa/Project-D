@@ -1,24 +1,25 @@
 <?php 
+session_start();
 include '../connection/dbconnection.php';
-include 'UserHeader.php';
-@$uid=$_SESSION['login_id'];
-echo $uid;
-
+include './UserHeader.php';
+@$uid = $_SESSION['login_id'];
+// @$rid = $_GET['rid'];
+// echo $uid;
 ?>
+
+<?php 
+
+$dqry= "SELECT * FROM `user_login` JOIN `user_registration` ON `user_login`.`reg_id`= `user_registration`.`reg_id` WHERE `login_id` = '$uid'  "; 
+          $data = mysqli_query($con, $dqry);
+
+          if ($data->num_rows > 0) {
+            while ($row = $data->fetch_assoc()) {
+?>
+    
+
 <div class="header-filler" style="background-color: #20232b;"></div>
 <section style="background-color: #20232b;">
   <div class="container py-5">
-    <div class="row">
-      <div class="col">
-        <nav aria-label="breadcrumb" class="bg-body-tertiary rounded-3 p-3 mb-4">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">User</a></li>
-            <li class="breadcrumb-item active" aria-current="page">User Profile</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
 
     <div class="row">
       <div class="col-lg-4">
@@ -26,39 +27,13 @@ echo $uid;
           <div class="card-body text-center">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
-            <h5 class="my-3"><?php echo  $row["first_name"];  ?></h5>
+            <h5 class="my-3"><?php echo  $row["first_name"];?></h5>
             <p class="text-muted mb-1">Full Stack Developer</p>
             <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
             <div class="d-flex justify-content-center mb-2">
               <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Follow</button>
               <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary ms-1">Message</button>
             </div>
-          </div>
-        </div>
-        <div class="card mb-4 mb-lg-0">
-          <div class="card-body p-0">
-            <ul class="list-group list-group-flush rounded-3">
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fas fa-globe fa-lg text-warning"></i>
-                <p class="mb-0">https://initialDream.com</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-github fa-lg text-body"></i>
-                <p class="mb-0">themaxpa</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                <p class="mb-0">@maxpacreation</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                <p class="mb-0">themaxpa</p>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                <p class="mb-0">maxpa</p>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -70,7 +45,7 @@ echo $uid;
                 <p class="mb-0">Full Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Johnatan Smith</p>
+                <p class="text-muted mb-0"><?php echo  $row["first_name"];?>  <?php echo  $row["last_name"];?></p>
               </div>
             </div>
             <hr>
@@ -79,7 +54,7 @@ echo $uid;
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">example@example.com</p>
+                <p class="text-muted mb-0"><?php echo  $row["email"];?></p>
               </div>
             </div>
             <hr>
@@ -88,7 +63,7 @@ echo $uid;
                 <p class="mb-0">Phone</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(097) 234-5678</p>
+                <p class="text-muted mb-0"><?php echo  $row["ph"];?></p>
               </div>
             </div>
             <hr>
@@ -97,7 +72,7 @@ echo $uid;
                 <p class="mb-0">Mobile</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(098) 765-4321</p>
+                <p class="text-muted mb-0"><?php echo  $row["ph"];?></p>
               </div>
             </div>
             <hr>
@@ -112,6 +87,8 @@ echo $uid;
             </div>
           </div>
         </div>
+
+
         <div class="row">
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
@@ -146,6 +123,7 @@ echo $uid;
               </div>
             </div>
           </div>
+
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
@@ -185,5 +163,6 @@ echo $uid;
   </div>
 </section>
 <?php 
+        }}
 include 'UserFooter.php';
 ?>

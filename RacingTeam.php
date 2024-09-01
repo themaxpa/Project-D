@@ -32,7 +32,7 @@ include './header.php';
     color: #fff;
     text-decoration: none;
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
     height: 45px;
     width: 185px;
@@ -40,9 +40,8 @@ include './header.php';
     padding: 13px 5px;
     border-radius: 10;
     margin-left: 26px;
-  }
-
-  .carousel-bx31 {
+}
+.carousel-bx31 {
     transform: skew(-20deg);
     background-color: transparent;
     border: 1px #fff solid;
@@ -52,12 +51,13 @@ include './header.php';
     font-size: 12px;
     font-weight: 900;
     height: 45px;
-    width: 185px;
+    width: 205px;
     text-transform: uppercase;
     padding: 13px 5px;
     border-radius: 10px;
-    margin-left: 26px;
-  }
+    margin-left: 15px;
+}
+
 
   .P-txt {
     color: #fff;
@@ -158,34 +158,33 @@ include './header.php';
     }
 
     .app-title {
-      padding-top: 10px;
-      font-size: 23px;
+      padding-top: 0px;
+     
     }
 
   }
 
   @media screen and (max-width: 1189px) {
     .app-title {
-      padding-top: 10px;
-      font-size: 10px;
+      padding-top: 5px;
     }
 
     .carousel-bx31 {
-      transform: skew(-20deg);
-      background-color: transparent;
-      border: 1px #fff solid;
-      color: #fff;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 900;
-      height: 45px;
-      width: 185px;
-      text-transform: uppercase;
-      padding: 13px 0px;
-      border-radius: 10px;
-      margin-left: 26px;
-    }
+    transform: skew(-20deg);
+    background-color: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 900;
+    height: 45px;
+    width: 205px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
   }
 </style>
 <section>

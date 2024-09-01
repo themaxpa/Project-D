@@ -31,6 +31,22 @@ include './header.php';
     width: 100%;
     background-color: #20232b;
   }
+  .carousel-bx3 {
+    transform: skew(-20deg);
+    background-color: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 900;
+    height: 45px;
+    width: 205px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    border-radius: 10;
+    margin-left: 26px;
+}
 </style>
 
 <!-- Carousel Silde -->

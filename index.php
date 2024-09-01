@@ -33,57 +33,78 @@ include './connection/dbconnection.php';
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" type="text/css" rel="stylesheet">
   <style>
-     .header-app{
+    .header-app {
       position: relative;
       margin-top: 70px;
-    background-color: #ee244e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:10vh;
-}
+      background-color: #ee244e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+    }
+
+    .wwa {
+      display: none;
+    }
+
+    .social {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      margin-top: 50px
+    }
+
     .carousel-control-pre .carousel-control-prev-icon span {
       background-color: transparent;
-    }.items4 {
+    }
+
+    .items4 {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-right: 160px;
       gap: 20px;
     }
+
     .search-bar-items {
       color: #fff;
       font-weight: 500;
     }
-    .carousel-bx3{
-    border-radius:10px;
-    height:55px;
-    width:235px;
-    padding-left:20px;
-    padding-top:15px;
-    font-size:15px
-  }
-.carousel-bx31{
-padding-top:15px;font-size:14px
-}
-.carousel-bx3{
-  transform: skew(-20deg);
-  background-color: transparent;
-  border: 1px #fff solid;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 900;
-  height: 45px;
-  width: 185px;
-  text-transform: uppercase;
-  padding: 13px 5px;
-  border-radius: 10;
-  margin-left: 26px;
-}
-.carousel-bx31{
-  transform: skew(-20deg);
+
+    .carousel-bx3 {
+      border-radius: 10px;
+      height: 55px;
+      width: 235px;
+      padding-left: 20px;
+      padding-top: 15px;
+      font-size: 15px
+    }
+
+    .carousel-bx31 {
+      padding-top: 15px;
+      font-size: 12px;
+    }
+
+    .carousel-bx3 {
+      transform: skew(-20deg);
+      background-color: transparent;
+      border: 1px #fff solid;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 900;
+      font-size: 12px;
+
+      height: 45px;
+      width: 185px;
+      text-transform: uppercase;
+      padding: 13px 5px;
+      border-radius: 10;
+      margin-left: 26px;
+    }
+
+    .carousel-bx31 {
+    transform: skew(-20deg);
     background-color: transparent;
     border: 1px #fff solid;
     color: #fff;
@@ -92,53 +113,442 @@ padding-top:15px;font-size:14px
     font-size: 12px;
     font-weight: 900;
     height: 45px;
-    width: 185px;
+    width: 205px;
     text-transform: uppercase;
     padding: 13px 5px;
     border-radius: 10px;
-    margin-left: 26px;
+    margin-left: 15px;
 }
-.search-bar {
-  width: 100%;
-  height: 15vh;
+
+    .search-bar {
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      margin: 0 auto;
+      font-size: 14px;
+      max-width: 900px;
+      padding: 16px 32px;
+      position: relative;
+      align-items: center;
+      border-radius: 20px;
+      transform: skew(-20deg);
+      justify-content: center;
+      background-color: #20232b;
+      margin: 0px 150px -200px 150px;
+    }
+
+    .search-bar-search input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      margin-top: -140px;
+
+    }
+
+    .search-bar-search {
+      height: 60px;
+      width: 170px;
+      background-color: transparent;
+      transform: skew(-20);
+      border-radius: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+
+    .search-bar-items sub {
+      margin-left: -50px;
+    }
+
+    .title-h1 {
+      margin: 60px 0 10px 0;
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 86px;
+      color: #fff;
+    }
+
+    .all-tracks-btn {
+    border-radius: 10px;
+    background: transparent;
+    transform: skew(-20deg);
+    color: #fff;
+    border: 1px solid #fff;
+    width: 200px;
+    height: 45px;
+    margin: 20px 0px 0px 240px;
+    padding: 10px 18px;
+    font-size: 17px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+    .ppp {
+      padding-left: 50px;
+    }
+
+    .stb-or-btn {
+      margin: 20px 0px 0px -70px;
+    }
+
+    .achivement {
+      margin-left: 270px;
+    }
+
+    .social p {
+      color: #fff;
+      opacity: 0.4;
+      margin-right: 250px;
+      font-weight: 400
+    }
+
+    .cta .container {
+      height: 10vh;
+    }
+
+    /* Carousel */
+    .d-block w-100 {
+      height: 600px;
+      opacity: 0.3;
+    }
+
+    .phone-carousel {
+      display: none;
+    }
+.ph-login{
+  display: none;
+}
+ 
+
+    /* Media Query =====================================================================================================================================
+===================================================================================================================================================*/
+    @media (max-width: 480px) {
+      .stb-or-btn {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        padding-left: 0px;
+        padding-top: 15px;
+      }
+.ph-login{
   display: flex;
-  margin: 0 auto;
-  font-size: 14px;
-  max-width: 900px;
-  padding: 16px 32px;
-  position: relative;
-  align-items: center;
-  border-radius: 20px;
-  transform: skew(-20deg);
-  justify-content: center;
-  background-color: #20232b;
-  margin: 0px 150px -200px 150px;
+  margin-left: 15px;
 }
-.search-bar-search input{
-  width: 100%;
-  height:100%;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #fff;
-  margin-top: -140px;
+      /* carousel */
+      .desktop-carousel {
+        display: none;
+      }
 
-}
+      .phone-carousel {
+        display: flex;
 
-.search-bar-search{
-  height: 60px;
-    width: 170px;
-    background-color: transparent;
-    transform: skew(-20);
-    border-radius: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-}
+        margin-bottom: 23px;
+      }
 
-.search-bar-items sub{
-  margin-left: -50px;
-}
 
-</style>
+      /* end */
+      .wwa {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -60px;
+        margin-left: 25px;
+      }
+
+      .wwa h5 {
+        font-size: 10;
+      }
+
+      .counts .counters span {
+        font-size: 50px;
+        display: block;
+        margin-top: 130px;
+        font-weight: 700;
+        color: #ee244e;
+      }
+
+      .counts .counters p {
+        padding: 0;
+        margin: 0 0 20px 0;
+        font-family: "Raleway", sans-serif;
+        font-size: 15px;
+        color: #fff;
+      }
+
+      .account-btn {
+        display: none;
+      }
+
+      .app-title .p-txt {
+        color: #fff;
+        font-weight: 600;
+        font-size: 10px;
+      }
+
+      .carousel-bx3 {
+        display: none;
+      }
+
+      .carousel-bx31 {
+        display: none;
+      }
+
+      .title h1 {
+        margin: 360px 0 10px 0px;
+        font-weight: 700;
+        line-height: 40px;
+        color: #fff;
+      }
+
+      #hero h1 {
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      #hero h2 {
+        font-size: 10px;
+        line-height: 24px;
+        margin-bottom: 40px;
+
+        margin-top: 185px;
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 5vh;
+        margin: 0 auto;
+        font-size: 8px;
+        max-width: 300px;
+        padding: 0px 0px;
+        position: relative;
+        border-radius: 10px;
+        transform: skew(-20deg);
+        background-color: #20232b;
+        margin: -25px 0px -80px 35px;
+        /* border: 1px solid #fff; */
+      }
+
+      .search-bar-search {
+        height: 20px;
+        width: 50px;
+        background-color: transparent;
+        transform: skew(-20);
+        border-radius: 10px;
+        font-size: 10px;
+        border-radius: 10px;
+      }
+
+      .search-bar-items {
+        height: 30px;
+        width: 50px;
+        background-color: transparent;
+        /* border: 1px solid #fff; */
+        transform: skew(-20);
+        border-radius: 10px;
+        font-size: 8px;
+        border-radius: 6px;
+      }
+
+      .search-bar-items sub {
+        margin-left: 0px;
+      }
+
+      .search-icon {
+        color: #fff;
+        background-color: #ee244e;
+        width: 39px;
+        height: 35px;
+        padding: 12px;
+        margin-right: -145px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-size: 10px;
+      }
+
+      .items4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 145px;
+        gap: 10px;
+      }
+
+      .wrapper-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        padding-top: 40px;
+        padding-left: 25px;
+      }
+
+      .all-track-title h3 {
+        font-size: 20px;
+      }
+
+      .all-track-padding {
+        padding-inline: 13px;
+      }
+
+      .pppT {
+        padding-left: 25px;
+      }
+
+      .ppp {
+        padding-left: 35px;
+        /* border: 1px solid #fff; */
+        width: 375px;
+        margin-left: 90px;
+        height: 20vh;
+        font-size: 10px;
+        padding: 20px;
+      }
+
+      .all-tracks-btn {
+        border-radius: 10px;
+        background: transparent;
+        transform: skew(-20deg);
+        color: #fff;
+        border: 1px solid #fff;
+        width: 180px;
+        height: 45px;
+        margin: 0px 0px 0px 185px;
+        padding: 10px 18px;
+        font-size: 17px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .cta h3 {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: -18px;
+      }
+
+      .cta .cta-btn {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 7px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 12px 15px;
+        border-radius: 2px;
+        transition: 0.5s;
+        margin-top: -40px;
+        margin-left: 285px;
+        background: #ee244e;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      .filler {
+        width: 100%;
+        height: 20vh;
+      }
+
+      .f-title {
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        font-size: 12px;
+        margin-top: -60px;
+        /* border: 1px solid #fff; */
+        padding-inline: 0px;
+        padding-left: 25px;
+      }
+
+      .f-sub-title {
+        color: #fff;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      .achivement {
+        display: none;
+      }
+
+      .achivement p {
+        display: none;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: auto;
+        height: 70vh;
+      }
+
+      /* footer */
+      .bottom-nav-list li {
+        display: none;
+      }
+
+      .news-letter1 {
+        color: #fff;
+        height: 5vh;
+        border-radius: 5px 0px 0px 5px;
+        background-color: #20232b;
+        border: solid 1px #fff;
+      }
+
+      .news-letter2 {
+        color: #fff;
+        height: 5vh;
+        width: 70px;
+        border-radius: 0px 5px 5px 0px;
+        background-color: #ee244e;
+        border: solid 1px #fff;
+        font-size: 10px;
+        padding: 5px;
+      }
+
+      .social p {
+        font-size: 5px;
+        margin-right: 0px;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+  </style>
 
 </head>
 
@@ -173,12 +583,13 @@ padding-top:15px;font-size:14px
                   <li><a href="#">Track 5</a></li> -->
                 </ul>
               </li>
-              <li><a class="nav-link scrollto" href="./VendorRegistration.php"></a></li>
-            </ul>
+              <div class="ph-login">
+              <li><a href="./account.php" class="account-btn">Login</a></li>
+              </div>
+                        </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
           <a href="./account.php" class="account-btn" style=" font-size:30px">
-            <!-- <i class="bi bi-list"></i> -->
             <i class="bi bi-person-circle"></i>
           </a>
         </div>
@@ -187,35 +598,37 @@ padding-top:15px;font-size:14px
   </header><!-- End Header col-xl-8 -->
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center" style="background-image: url('./assets/img/track1.jpg'); background-size: cover;">
-  <div class="header-app">
-  <div class="app-title">
-  <p class="p-txt" style="margin-top: 15px;">World's Best Track day app - Start your booking right!</p>
-  </div>
-  <div class="carousel-bx3">
-    <a href="https://www.apple.com/in/app-store/"><i class="bi bi-apple"></i> Download app store</a>
-  </div>
-  <div class="carousel-bx31">
-    <a href="https://play.google.com/store/apps?hl=en_IN"><i class="bi bi-google-play"></i> Download Google Play</a>
-  </div>
-</div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="title">
-          <h1 class="title-h1" style="    margin: 60px 0 10px 0; font-size: 70px; font-weight: 700;line-height: 86px; color: #fff;">
-            YOUR TRACKDAY MARKETPLACE
-          </h1>
-        </div>
-        <h2 style=" font-family:myFont;">Search. Book. Drive. Repeat</h2>
+    <div class="header-app">
+      <div class="app-title">
+        <p class="p-txt" style="margin-top: 15px;">World's Best Track day app - Start your booking right!</p>
       </div>
-      <div class="search-bar">
-        <div class="items4">
-        <div class="search-bar-search">
-            <input type="text" name="search" placeholder="Search...">
+      <div class="carousel-bx3">
+        <a href="https://www.apple.com/in/app-store/"><i class="bi bi-apple"></i> Download app store</a>
+      </div>
+      <div class="carousel-bx31">
+        <a href="https://play.google.com/store/apps?hl=en_IN"><i class="bi bi-google-play"></i> Download Google Play</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-section">
+        <div class="row justify-content-center">
+          <div class="title">
+            <h1 class="title-h1">
+              YOUR TRACKDAY MARKETPLACE
+            </h1>
+          </div>
+          <h2 style=" font-family:myFont;">Search. Book. Drive. Repeat</h2>
         </div>
-          <div class="search-bar-items"><sub>Event types</sub></div>
-          <div class="search-bar-items"><sub>Vehicle types </sub></div>
-          <div class="search-bar-items"><sub>Dates </sub></div>
-          <div class="search-icon"><i class="fas fa-search"></i></div>
+        <div class="search-bar">
+          <div class="items4">
+            <div class="search-bar-search">
+              <input type="text" name="search" placeholder="Search...">
+            </div>
+            <div class="search-bar-items"><sub>Event types</sub></div>
+            <div class="search-bar-items"><sub>Vehicle types </sub></div>
+            <div class="search-bar-items"><sub>Dates </sub></div>
+            <div class="search-icon"><i class="fas fa-search"></i></div>
+          </div>
         </div>
       </div>
     </div>
@@ -229,103 +642,103 @@ padding-top:15px;font-size:14px
         <div class="track-section" style=" display: flex;">
 
           <?php
-         $qry = "SELECT `vendor_id`,`image`,`track_name`,`event`,`date`,`vehicle_type`,`category`,`organizer`,`noise_level`,`price` FROM `tracks`";
-         // echo $qry;
-         $data = mysqli_query($con, $qry);
-   
-         if ($data->num_rows > 0) {
-           while ($row = $data->fetch_assoc()) {
-             $uid = $row['vendor_id'];
-         ?>
-             <!--== Track===-->
-             <div class="card-D" style="width: 300px;height: 450px;">
-               <div class="id-card--top-image-container">
-                 <img style="    border-radius: 15px 15px 0px 0px; width: 300px;height: 150px;" loading="lazy" class="card-img-top" src="Vendor\images\<?php echo $row['image']; ?>" alt="Preview Image" />
-               </div>
-               <div class="id-card-body"  style="padding: 10px;">
-                 <div class="id-body-header">
-   
-                   <h5 class="portfolio-title header--title text-white">
-                     <?php echo  $row["track_name"]; ?>
-                   </h5>
-                   <p>
-                     <?php echo  $row["event"]; ?>
-                   </p>
-                 </div>
-                 <div class="body">
-                   <div class="row mt-4">
-                     <div class="flex-columns">
-                       <div class="col-12 flex-column p-0 pr-2">
-                         <div class="value start-date">
-                           <i class="bi bi-calendar2"></i>
-                           <?php echo  $row["date"];  ?>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="row mt-2">
-                     <div class="flex__columns">
-                       <div class="col-12 flex-column p-0 pr-2">
-                         <div class="value">
-                           <i class="fa-solid fa-car"></i>
-                           <?php echo  $row["vehicle_type"];  ?>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="row mt-2">
-                     <div class="flex__columns">
-                       <div class="col-12 flex-column p-0 pr-2">
-                         <div class="value">
-                           <i class="bi bi-flag-fill"></i>
-                           <?php echo  $row["category"];  ?>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="row mt-2">
-                     <div class="flex__columns">
-                       <div class="col-12 flex-column p-0 pr-2">
-                         <div class="value">
-                           <i class="bi bi-building-fill"></i>
-                           <a rel="alternate" href="" hreflang="en">
-                             <?php echo  $row["organizer"];  ?>
-                           </a>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="row mt-4">
-                     <div class="flex__columns">
-   
-                       <div class="col-6 flex-column p-0 pl-2">
-                         <div class="caption-text">
-   
-                         </div>
-                         <div class="value"><?php echo  $row["noise_level"];  ?></div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="row mt-4">
-                     <div class="flex__columns">
-                       <div class="col-6 flex-column p-0 pr-2" style="margin:0px 0px 0px 65px;">
-   
-                         <div class="price">
-                           <a rel="alternate" class="track-price" href="./TrackBooking.php" hreflang="en">
-                             <button style=" width: 100px; height: 40px;font-weight: 600;font-size: 15px;margin: -40px 0px 0px 100px;">
-                               <?php echo  $row["price"];  ?>
-                             </button>
-                           </a>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-         <?php
-           }
-         } ?>
+          $qry = "SELECT `vendor_id`,`image`,`track_name`,`event`,`date`,`vehicle_type`,`category`,`organizer`,`noise_level`,`price` FROM `tracks`";
+          // echo $qry;
+          $data = mysqli_query($con, $qry);
+
+          if ($data->num_rows > 0) {
+            while ($row = $data->fetch_assoc()) {
+              $uid = $row['vendor_id'];
+          ?>
+              <!--== Track===-->
+              <div class="card-D" style="width: 300px;height: 450px;">
+                <div class="id-card--top-image-container">
+                  <img style="    border-radius: 15px 15px 0px 0px; width: 300px;height: 150px;" loading="lazy" class="card-img-top" src="Vendor\images\<?php echo $row['image']; ?>" alt="Preview Image" />
+                </div>
+                <div class="id-card-body" style="padding: 10px;">
+                  <div class="id-body-header">
+
+                    <h5 class="portfolio-title header--title text-white">
+                      <?php echo  $row["track_name"]; ?>
+                    </h5>
+                    <p>
+                      <?php echo  $row["event"]; ?>
+                    </p>
+                  </div>
+                  <div class="body">
+                    <div class="row mt-4">
+                      <div class="flex-columns">
+                        <div class="col-12 flex-column p-0 pr-2">
+                          <div class="value start-date">
+                            <i class="bi bi-calendar2"></i>
+                            <?php echo  $row["date"];  ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-2">
+                      <div class="flex__columns">
+                        <div class="col-12 flex-column p-0 pr-2">
+                          <div class="value">
+                            <i class="fa-solid fa-car"></i>
+                            <?php echo  $row["vehicle_type"];  ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-2">
+                      <div class="flex__columns">
+                        <div class="col-12 flex-column p-0 pr-2">
+                          <div class="value">
+                            <i class="bi bi-flag-fill"></i>
+                            <?php echo  $row["category"];  ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-2">
+                      <div class="flex__columns">
+                        <div class="col-12 flex-column p-0 pr-2">
+                          <div class="value">
+                            <i class="bi bi-building-fill"></i>
+                            <a rel="alternate" href="" hreflang="en">
+                              <?php echo  $row["organizer"];  ?>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="flex__columns">
+
+                        <div class="col-6 flex-column p-0 pl-2">
+                          <div class="caption-text">
+
+                          </div>
+                          <div class="value"><?php echo  $row["noise_level"];  ?></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="flex__columns">
+                        <div class="col-6 flex-column p-0 pr-2" style="margin:0px 0px 0px 65px;">
+
+                          <div class="price">
+                            <a rel="alternate" class="track-price" href="./GoToRegistration.php" hreflang="en">
+                              <button style=" width: 100px; height: 40px;font-weight: 600;font-size: 15px;margin: -40px 0px 0px 100px;">
+                                <?php echo  $row["price"];  ?>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <?php
+            }
+          } ?>
           <!--End item -->
 
         </div>
@@ -336,52 +749,52 @@ padding-top:15px;font-size:14px
     <div class="all-tracks">
       <div class="all-track-padding">
         <div class="all-track-title">
-          <h3 class="h1-txt" style=" font-size:30px;">Book your event dates with a few clicks</h3>
+          <h3 class="h1-txt">Book your event dates with a few clicks</h3>
         </div>
-        <p class="p-txt" style="padding-left: 50px;">We offer a wide range of track day dates for cars and bikes, driving and riding experience as well as test days for racing teams. Easily bookable, independently from the corresponding organizer.</p>
+        <div class="pppT">
+          <p class="p-txt">We offer a wide range of track day dates for cars and bikes, driving and riding experience as well as test days for racing teams. Easily bookable, independently from the corresponding organizer.</p>
+        </div>
       </div>
       <div class="stb-or-btn">
-        <a href="./demo.php" class="all-tracks-btn" style="margin: 20px 0px 0px 183px;">All track days</a>
+        <a href="./demo.php" class="all-tracks-btn">All track days</a>
       </div>
     </div><!--=== End all tracks Section ===== -->
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
 
-      <div class="container" style="height:10vh">
+      <div class="container">
         <div class="cta-con" style="margin: -96px;">
-        <div class="col-lg-9 text-center text-lg-start">
-          <h3 style="font-family:myFont; "> Start your track experience on Initial D</h3>
-          <p>Your on-track experience starts with Initial D. Book your track day, your driving or riding experience or test days for your race team with us - with just a few clicks, secure online payment and independently from the event organizers.</p>
-          <a class="cta-btn align-middle" href="#">Book Now</a>
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3 style="font-family:myFont; "> Start your track experience on Initial D</h3>
+            <div class="ppp">
+              <p>Your on-track experience starts with Initial D. Book your track day, your driving or riding experience or test days for your race team with us - with just a few clicks, secure online payment and independently from the event organizers.</p>
+            </div>
+            <a class="cta-btn align-middle" href="#">Book Now</a>
           </div>
         </div>
       </div>
     </section><!-- End Cta Section -->
   </main>
 
-    <!-- End filler -->
-    <section>
-      <div class="filler">
-        <div class="index-sec-title">
-          <h1 class="f-title">We aim to create new standards in the track day market</h1>
-          <h4 class="f-sub-title">And keep them evolving</h4>
-
-
-
-
-
-
-        </div>
-    </section><!-- End filler -->
+  <!-- End filler -->
+  <section>
+    <div class="filler">
+      <div class="index-sec-title">
+        <h1 class="f-title">We aim to create new standards in the track day market</h1>
+        <h4 class="f-sub-title">And keep them evolving</h4>
+      </div>
+  </section><!-- End filler -->
 
 
 
   <!-- ======= Counts Section ======= -->
   <section id="counts" class="counts">
     <div class="container">
-
-      <div class="achivement" style="margin-left: 270px;">
+      <div class="wwa">
+        <h3>What we have achieved so far</h3>
+      </div>
+      <div class="achivement">
         <h3>What we have achieved so far</h3>
         <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
       </div>
@@ -482,79 +895,123 @@ padding-top:15px;font-size:14px
   </section><!-- End Faq Section -->
 
   <!-- Carousel Silde -->
-  <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="./assets/img/carousel.jpg" class="d-block w-100" alt="..." style="height: 600px;opacity:0.3;">
-        <div class=" carousel-caption mb-5 d-md-block">
-          <h1 style="margin: 0 0 40px 0; font-family:myFont; font-size: 62px; font-weight: 700;  line-height: 86px; color: #fff;"> YOUR BEST TRACK DAY EXPERIENCE START HERE </h1>
-          <div class="content">
-            <div class="carousel-bx1" style="border-radius:10px;">
-              <a href="#">Book Now</a>
-            </div>
-            <div class="carousel-bx2" style="border-radius:10px;">
-              <a href="#">Learn More</a>
-            </div>
-            <div class="carousel-bx3" style="border-radius:10px;">
-              <a href="#">our team & investors</a>
+  <div class="desktop-carousel">
+    <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="./assets/img/carousel.jpg" class="d-block w-100" alt="..." style="opacity: 0.3;">
+          <div class=" carousel-caption mb-5 d-md-block">
+            <h1 style="margin: 0 0 40px 0; font-family:myFont; font-size: 62px; font-weight: 700;  line-height: 86px; color: #fff;"> YOUR BEST TRACK DAY EXPERIENCE START HERE </h1>
+            <div class="content">
+              <div class="carousel-bx1" style="border-radius:10px;">
+                <a href="#">Book Now</a>
+              </div>
+              <div class="carousel-bx2" style="border-radius:10px;">
+                <a href="#">Learn More</a>
+              </div>
+              <div class="carousel-bx3" style="border-radius:10px;">
+                <a href="#">our team & investors</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="./assets/img/carousel-bike.jpg" class="d-block w-100" alt="..." style="height: 600px;opacity:0.3;">
-        <div class=" carousel-caption d-none d-md-block">
-          <h1 style="margin: -303px 0 40px 0; font-family:myFont;  font-size: 62px; font-weight: 700; line-height: 86px; color: #fff;">YOUR BEST MOTORSPORT TEST DAYS START HERE</h1>
-          <div class="content">
-            <div class="carousel-bx1" style="border-radius:10px;">
-              <a href="#">Book Now</a>
-            </div>
-            <div class="carousel-bx2" style="border-radius:10px;">
-              <a href="#">Learn More</a>
-            </div>
-            <div class="carousel-bx3" style="border-radius:10px;">
-              <a href="#">our team & investors</a>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./assets/img/carousel-bike.jpg" class="d-block w-100" alt="..." style="opacity: 0.3;">
+          <div class=" carousel-caption d-none d-md-block">
+            <h1 style="margin: -303px 0 40px 0; font-family:myFont;  font-size: 62px; font-weight: 700; line-height: 86px; color: #fff;">YOUR BEST MOTORSPORT TEST DAYS START HERE</h1>
+            <div class="content">
+              <div class="carousel-bx1" style="border-radius:10px;">
+                <a href="#">Book Now</a>
+              </div>
+              <div class="carousel-bx2" style="border-radius:10px;">
+                <a href="#">Learn More</a>
+              </div>
+              <div class="carousel-bx3" style="border-radius:10px;">
+                <a href="#">our team & investors</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="carousel-item">
-        <img src="./assets/img/carousel-car.jpg" class="d-block w-100" alt="..." style="height:600px;opacity:0.3;">
-        <div class="carousel-caption d-none d-md-block">
-          <h1 style="margin: -303px 0 0px 0; font-family:myFont; font-size: 60px; font-weight: 700; line-height: 86px; color: #fff; margin-bottom:11px">YOUR BEST MOTORBIKE TEST DAYS START HERE </h1>
-          <div class="content">
-            <div class="carousel-bx1" style="border-radius:10px;">
-              <a href="#">Book Now</a>
-            </div>
-            <div class="carousel-bx2" style="border-radius:10px;">
-              <a href="#">Learn More</a>
-            </div>
-            <div class="carousel-bx3" style="border-radius:10px;">
-              <a href="#">our team & investors</a>
-            </div>
+        <div class="carousel-item">
+          <img src="./assets/img/carousel-car.jpg" class="d-block w-100" alt="..." style="opacity: 0.3;">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="margin: -303px 0 0px 0; font-family:myFont; font-size: 60px; font-weight: 700; line-height: 86px; color: #fff; margin-bottom:11px">YOUR BEST MOTORBIKE TEST DAYS START HERE </h1>
+            <div class="content">
+              <div class="carousel-bx1" style="border-radius:10px;">
+                <a href="#">Book Now</a>
+              </div>
+              <div class="carousel-bx2" style="border-radius:10px;">
+                <a href="#">Learn More</a>
+              </div>
+              <div class="carousel-bx3" style="border-radius:10px;">
+                <a href="#">our team & investors</a>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-
   <!-- End Carousel Slide-->
-
+  <!-- phone carousel -->
+  <div class="phone-carousel">
+    <div class="bd-example">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets//img/carousel.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets//img/carousel-bike.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets//img/carousel-car.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- end  -->
 
   </main><!-- End #main -->
 
@@ -622,8 +1079,8 @@ padding-top:15px;font-size:14px
           </ul>
         </div>
       </div>
-      <div class="social" style="  width: 100%; display: flex; justify-content: end; margin-top:50px">
-        <p style="color:#fff; opacity:0.4; margin-right:250px; font-weight:400">Initial D Booking &copy;2024. All rights reserved. Designed & Developed by <span class="designer">themaxpa</span>
+      <div class="social">
+        <p>Initial D Booking &copy;2024. All rights reserved. Designed & Developed by <span class="designer">themaxpa</span>
         </p>
         <a href="https://x.com/?lang=en-in" style="margin: 0px 20px;"><i class="bi bi-twitter-x"></i></a>
         <a href="https://www.facebook.com/" style="margin: 0px 20px;"><i class=" bi bi-facebook"></i></a>

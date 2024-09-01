@@ -31,7 +31,72 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/login.css4 " rel="stylesheet">
+<style>
+  .header-app {
+      position: relative;
+      margin-top: 70px;
+      background-color: #ee244e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+    }
+    
+    .social {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      margin-top: 50px
+    }
 
+    .carousel-bx3 {
+      border-radius: 10px;
+      height: 55px;
+      width: 235px;
+      padding-left: 20px;
+      padding-top: 15px;
+      font-size: 15px
+    }
+
+    .carousel-bx31 {
+      padding-top: 15px;
+      font-size: 14px
+    }
+
+    .carousel-bx3 {
+      transform: skew(-20deg);
+      background-color: transparent;
+      border: 1px #fff solid;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 900;
+      height: 45px;
+      width: 185px;
+      text-transform: uppercase;
+      padding: 13px 5px;
+      border-radius: 10;
+      margin-left: 26px;
+    }
+
+    .carousel-bx31 {
+      transform: skew(-20deg);
+      background-color: transparent;
+      border: 1px #fff solid;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 900;
+      height: 45px;
+      width: 185px;
+      text-transform: uppercase;
+      padding: 13px 5px;
+      border-radius: 10px;
+      margin-left: 26px;
+    }
+</style>
 </head>
 <body>
 
@@ -83,65 +148,8 @@
                   <a class="nav-link nav-icon search-bar-toggle " href="#">
                     <i class="bi bi-search"></i>
                   </a>
-                </li><!-- End Search Icon-->
-
-                <li class="nav-item dropdown pe-3">
-
-                  <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-                  </a><!-- End Profile Iamge Icon -->
-
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                    <li class="dropdown-header">
-                      <h6>Kevin Anderson</h6>
-                      <span>Web Designer</span>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                        <i class="bi bi-person"></i>
-                        <span>My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                        <i class="bi bi-gear"></i>
-                        <span>Account Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                        <i class="bi bi-question-circle"></i>
-                        <span>Need Help?</span>
-                      </a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item d-flex align-items-center" href="../index.php">
-                        <i class="bi bi-box-arrow-right"></i>
-                        <span>Sign Out</span>
-                      </a>
-                    </li>
-
-                  </ul><!-- End Profile Dropdown Items -->
-                 </li><!-- End Profile Nav -->
+                </li><!-- End Search -->
               </ul>
-            </ul>
           </nav><!-- .navbar -->
         </div>
       </div>

@@ -142,14 +142,16 @@
     visibility: hidden;
     opacity: 0;
     right: 15px;
-    background: #ee244e !important;
+    background: #babcc5 !important;
     bottom: 15px;
     z-index: 996;
+    border: 3px solid gray;
+    color: #20232b;
     width: 40px;
     height: 40px;
     border-radius: 50px;
     transition: all 0.4s;
-  }
+}
   
   .back-to-top i {
     font-size: 28px;
@@ -158,8 +160,8 @@
   }
   
   .back-to-top:hover {
-    background: #ee244e;
-    color: #20232b;
+    background: #20232b;
+    color: #babcc5;
   }
   
   .back-to-top.active {
@@ -203,7 +205,11 @@
   font-size: 20px;
     display: inline-block;
   }
-  
+  @media (max-width: 480px){
+    .account-btn {
+  display: none;
+    }
+  }
   
   .account-btn:hover {
     color: #fff;
@@ -388,7 +394,7 @@
     transition: 0.5s;
   }
   
-  @media (max-width: 991px) {
+   @media (max-width: 991px) {
     .mobile-nav-toggle {
       display: block;
     }
@@ -397,7 +403,7 @@
       display: none;
     }
   }
-  
+   
   .navbar-mobile {
     position: fixed;
     overflow: hidden;
@@ -777,7 +783,132 @@
   /*--------------------------------------------------------------
   # Features
   --------------------------------------------------------------*/
-  
+  .price a button {
+    margin: 10px 0px 0px 60px;
+  }
+
+  .achivement {
+    color: #fff;
+    position: relative;
+    text-align: center;
+  }
+
+  .header-filler {
+    width: 100%;
+    height: 8dvh;
+    background-color: #202232;
+  }
+
+  .header-app {
+    position: relative;
+    margin-top: 70px;
+    background-color: #ee244e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+  }
+
+  .items4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 160px;
+    gap: 20px;
+  }
+
+  .search-bar-items {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .carousel-bx3 {
+    border-radius: 10px;
+    height: 55px;
+    width: 235px;
+    padding-left: 20px;
+    padding-top: 15px;
+    font-size: 15px
+  }
+
+  .carousel-bx31 {
+    padding-top: 15px;
+    font-size: 14px
+  }
+
+  .carousel-bx3 {
+    transform: skew(-20deg);
+    background-color: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 900;
+    height: 45px;
+    width: 185px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    border-radius: 10;
+    margin-left: 26px;
+  }
+
+  .carousel-bx31 {
+    transform: skew(-20deg);
+    background-color: transparent;
+    border: 1px #fff solid;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 900;
+    height: 45px;
+    width: 185px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    border-radius: 10px;
+    margin-left: 26px;
+  }
+
+  .title-h1 {
+    margin: 60px 0 10px 0;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 86px;
+    color: #fff;
+  }
+
+  /* Media Query =====================================================================================================================================
+===================================================================================================================================================*/
+
+  @media (max-width: 480px) {
+    .stb-or-btn {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      padding-left: 0px;
+      padding-top: 15px;
+    }
+
+    .account-btn {
+      display: none;
+    }
+
+    .app-title .p-txt {
+      color: #fff;
+      font-weight: 600;
+      font-size: 10px;
+    }
+
+    .carousel-bx3 {
+      display: none;
+    }
+
+    .carousel-bx31 {
+      display: none;
+    }
+  }
+  /* footer */
   
   /*--------------------------------------------------------------
   # Clients

@@ -2,7 +2,17 @@
 include './connection/dbconnection.php';
 include './header.php';
 ?>
-
+<style>
+  /* .display-img {
+    margin-top: 10px;
+    margin-left: 180px;
+    width: 750px;
+    height: 450px;
+    border-radius: 50px 50px 50px 50px;
+    background-size: cover;
+    background-image: url(../img/wp12661363-bike-racing-4k-wallpapers.jpg);
+} */
+</style>
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center" style="background-image: url('./assets/img/sust-bg.jpg'); height:90dvh;">

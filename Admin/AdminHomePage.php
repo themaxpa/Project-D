@@ -80,10 +80,10 @@ include '../connection/dbconnection.php';
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
                             <!-- <li><a class="nav-link scrollto active" href="./ViewUser.php">View User</a></li> -->
-                            <li><a class="nav-link scrollto" href="./about.php">About</a></li>
+                            <!-- <li><a class="nav-link scrollto" href="./about.php">About</a></li>
                             <li><a class="nav-link scrollto" href="#services">Services</a></li>
                             <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+                            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
                             <li class="dropdown"><a href="#"><span>View</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
                                     <li><a href="./ViewUser.php">User</a></li>
@@ -101,7 +101,7 @@ include '../connection/dbconnection.php';
                                     <li><a href="#">Drop Down 4</a></li> -->
                                 </ul>
                             </li>
-                            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                            <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
                             <li><i class="bi bi-list mobile-nav-toggle"></i></li>
                         </ul>
 

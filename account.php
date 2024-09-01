@@ -129,6 +129,7 @@ include './header.php';
         animation-duration: 0.7s;
       animation-fill-mode: forwards;
       animation-delay: 0.2s;
+      margin:95px 0px 20px 0px
     }
     
     @keyframes info-d{
@@ -199,13 +200,59 @@ include './header.php';
         box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.9),
         -5px -5px 5px #fff;
         padding-right: 2px;
-    } */
+    } 
+
+
+    /* Media Query 320 */
+    @media (max-width: 320px){
+        .section-reg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+        background-color: #ee244b;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        position: absolute;
+        animation-name: log;
+        animation-duration: 0.7s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.2s;
+        box-shadow: #20232b;
+    }
+
+    }
+
+    /* Media Query 480 */
+    @media (max-width: 480px) {
+        .login-container {
+        background-color: #ee244b;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin-top: 200px;
+        margin-left: 80px;
+        position: absolute;
+        animation-name: log;
+        animation-duration: 0.7s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.2s;
+        box-shadow: #20232b;
+    }
+.info-d {
+    display: none;
+}
+    }
     </style>
 
 
 <section>
  <div class="section-reg">
-        <div class="info-d" style="margin:95px 0px 20px 0px">
+        <div class="info-d">
             <h2 class="advantage-txt">Advantages for trackday &amp; event organizer</h2>
             <p class="initiald-txt ">Initial D Booking is the additional sales channel to your website or direct sales. As an event organizer, you can easily offer available slots of your events on our platform and receive the payment immediately after a customer&#039;s booking.</p>
             <ul class="">
